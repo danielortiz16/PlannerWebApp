@@ -12,37 +12,26 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <nav className="sticky top-0 z-50 bg-[#0a0a1a]/90 backdrop-blur border-b border-indigo-900">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-emerald-700 tracking-tight">
-          🌿 PlanitPlease
+        <Link href="/" className="text-xl font-bold text-yellow-300 tracking-tight">
+          🪐 PlanitPlease
         </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
-            >
+            <Link key={l.href} href={l.href} className="text-sm text-slate-400 hover:text-white transition-colors">
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/#waitlist"
-            className="bg-emerald-700 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors"
-          >
+          <Link href="/#waitlist" className="bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-2 rounded-lg hover:bg-yellow-300 transition-colors">
             Join Waitlist
           </Link>
         </div>
 
         {/* Mobile toggle */}
-        <button
-          className="md:hidden p-2 text-gray-600"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
+        <button className="md:hidden p-2 text-slate-400" onClick={() => setOpen(!open)} aria-label="Toggle menu">
           {open ? (
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -55,24 +44,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 flex flex-col gap-4">
+        <div className="md:hidden border-t border-indigo-900 bg-[#0a0a1a] px-6 py-4 flex flex-col gap-4">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-sm text-gray-700 hover:text-indigo-600"
-              onClick={() => setOpen(false)}
-            >
+            <Link key={l.href} href={l.href} className="text-sm text-slate-400 hover:text-white" onClick={() => setOpen(false)}>
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/#waitlist"
-            className="bg-emerald-700 text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-emerald-800"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/#waitlist" className="bg-yellow-400 text-gray-900 text-sm font-bold px-4 py-2 rounded-lg text-center hover:bg-yellow-300" onClick={() => setOpen(false)}>
             Join Waitlist
           </Link>
         </div>
