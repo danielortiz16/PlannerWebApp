@@ -38,15 +38,15 @@ export default function Home() {
             <span className="flex items-center gap-2"><span className="text-yellow-300">🎯</span> Set your priorities</span>
             <span className="flex items-center gap-2"><span className="text-yellow-300">📅</span> Get your plan instantly</span>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#waitlist" className="bg-yellow-400 text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition-colors text-lg shadow-lg">
-              Join the Waitlist for Free
-            </Link>
-            <Link href="/#how-it-works" className="bg-white/10 text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/20 transition-colors text-lg border border-white/20">
-              See How It Works
+          <div className="max-w-md mx-auto">
+            <WaitlistForm />
+          </div>
+          <p className="mt-4 text-sm text-slate-500">No credit card required. Launching soon.</p>
+          <div className="mt-6">
+            <Link href="/#how-it-works" className="text-sm text-indigo-400 hover:text-indigo-300 underline underline-offset-4 transition-colors">
+              See how it works
             </Link>
           </div>
-          <p className="mt-6 text-sm text-slate-500">No credit card required. Launching soon.</p>
         </div>
       </section>
 
@@ -121,14 +121,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Waitlist */}
-      <section id="waitlist" className="max-w-6xl mx-auto px-6 py-28 text-center">
-        <h2 className="text-4xl font-extrabold text-white mb-4">Ready to get your time back?</h2>
-        <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-          Join students already on the waitlist. Be the first to get access when PlanitPlease launches.
-        </p>
-        <WaitlistForm />
-      </section>
     </>
   );
 }
