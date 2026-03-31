@@ -58,12 +58,17 @@ export default function Home() {
             Built for college students
           </span>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-            Stop drowning in to-dos.<br />
-            <span className="text-yellow-300">Start living on purpose.</span>
+            Your daily plan,<br />
+            <span className="text-yellow-300">designed around your life.</span>
           </h1>
-          <p className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-10">
-            Inplantoo is the AI-powered planner that builds your schedule around <em>your</em> priorities — then adapts in real time when life inevitably changes.
+          <p className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-6">
+            Inplantoo helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we&apos;ll build a personalized daily plan — automatically.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm text-indigo-200">
+            <span className="flex items-center gap-2"><span className="text-yellow-300">📸</span> Upload your schedule</span>
+            <span className="flex items-center gap-2"><span className="text-yellow-300">🎯</span> Set your priorities</span>
+            <span className="flex items-center gap-2"><span className="text-yellow-300">📅</span> Get your plan instantly</span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#waitlist"
@@ -96,13 +101,14 @@ export default function Home() {
       {/* Problem */}
       <section className="max-w-6xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-          Every planner tells you <span className="text-indigo-600">what</span> to do.<br />
-          None of them care <span className="text-indigo-600">why.</span>
+          College is busy. <span className="text-indigo-600">Your planner should keep up.</span>
         </h2>
-        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-          Generic to-do apps don&apos;t know you want better grades more than you want to go to the gym. They don&apos;t know your Tuesday is insane but Friday is free. And they definitely don&apos;t help when an exam gets moved or a group project explodes.
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-4">
+          Between classes, assignments, clubs, and everything else, it&apos;s hard to know where to even start. Most planners give you a blank calendar and wish you luck.
         </p>
-        <p className="text-gray-800 font-semibold text-lg mt-6">Inplantoo does.</p>
+        <p className="text-gray-500 text-lg max-w-2xl mx-auto">
+          Inplantoo is different. Snap a photo of your class schedule, tell us what you&apos;re working toward, and we&apos;ll design a realistic daily plan built around <em>your</em> life.
+        </p>
       </section>
 
       {/* Priorities */}
