@@ -38,7 +38,7 @@ const steps = [
   {
     step: "03",
     title: "Get Your Plan",
-    desc: "Inplantoo builds a personalized weekly schedule around your goals and existing commitments.",
+    desc: "Inplantoo builds a personalized daily schedule around your goals and existing commitments.",
   },
   {
     step: "04",
@@ -51,7 +51,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-violet-600 to-purple-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-green-700 via-emerald-600 to-teal-600 text-white">
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_20%_80%,white,transparent_50%)]" />
         <div className="relative max-w-6xl mx-auto px-6 py-28 text-center">
           <span className="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
@@ -59,20 +59,20 @@ export default function Home() {
           </span>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
             Your daily plan,<br />
-            <span className="text-yellow-300">designed around your life.</span>
+            <span className="text-lime-300">designed around your life.</span>
           </h1>
-          <p className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-6">
+          <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto mb-6">
             Inplantoo helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we&apos;ll build a personalized daily plan — automatically.
           </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm text-indigo-200">
-            <span className="flex items-center gap-2"><span className="text-yellow-300">📸</span> Upload your schedule</span>
-            <span className="flex items-center gap-2"><span className="text-yellow-300">🎯</span> Set your priorities</span>
-            <span className="flex items-center gap-2"><span className="text-yellow-300">📅</span> Get your plan instantly</span>
+          <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm text-green-200">
+            <span className="flex items-center gap-2"><span className="text-lime-300">📸</span> Upload your schedule</span>
+            <span className="flex items-center gap-2"><span className="text-lime-300">🎯</span> Set your priorities</span>
+            <span className="flex items-center gap-2"><span className="text-lime-300">📅</span> Get your plan instantly</span>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/#waitlist"
-              className="bg-yellow-400 text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-yellow-300 transition-colors text-lg shadow-lg"
+              className="bg-lime-400 text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-lime-300 transition-colors text-lg shadow-lg"
             >
               Join the Waitlist — Free
             </Link>
@@ -83,25 +83,25 @@ export default function Home() {
               See How It Works
             </Link>
           </div>
-          <p className="mt-6 text-sm text-indigo-200">No credit card required. Launching soon.</p>
+          <p className="mt-6 text-sm text-green-200">No credit card required. Launching soon.</p>
         </div>
       </section>
 
       {/* Social proof bar */}
-      <section className="bg-gray-50 border-b border-gray-100 py-5">
-        <div className="max-w-4xl mx-auto px-6 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm text-gray-500 text-center">
-          <span>✅ Priority-based scheduling</span>
-          <span>✅ Real-time rescheduling</span>
-          <span>✅ Upload your class schedule</span>
-          <span>✅ Calendar sync</span>
-          <span>✅ Works around your life</span>
+      <section className="bg-green-50 border-b border-green-100 py-5">
+        <div className="max-w-4xl mx-auto px-6 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm text-green-700 text-center">
+          <span>🌱 Priority-based scheduling</span>
+          <span>🌱 Real-time rescheduling</span>
+          <span>🌱 Upload your class schedule</span>
+          <span>🌱 Calendar sync</span>
+          <span>🌱 Works around your life</span>
         </div>
       </section>
 
       {/* Problem */}
       <section className="max-w-6xl mx-auto px-6 py-24 text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
-          College is busy. <span className="text-indigo-600">Your planner should keep up.</span>
+          College is busy. <span className="text-emerald-600">Your planner should keep up.</span>
         </h2>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-4">
           Between classes, assignments, clubs, and everything else, it&apos;s hard to know where to even start. Most planners give you a blank calendar and wish you luck.
@@ -112,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* Priorities */}
-      <section id="priorities" className="bg-gradient-to-b from-indigo-50 to-white py-24">
+      <section id="priorities" className="bg-gradient-to-b from-green-50 to-white py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
@@ -124,7 +124,7 @@ export default function Home() {
             {priorities.map((p) => (
               <div
                 key={p.label}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow text-center"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-green-100 hover:shadow-md hover:border-green-300 transition-all text-center"
               >
                 <div className="text-4xl mb-4">{p.icon}</div>
                 <h3 className="font-bold text-gray-900 mb-2">{p.label}</h3>
@@ -146,7 +146,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((s) => (
             <div key={s.step}>
-              <div className="text-5xl font-extrabold text-indigo-100 mb-3">{s.step}</div>
+              <div className="text-5xl font-extrabold text-green-100 mb-3">{s.step}</div>
               <h3 className="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>
               <p className="text-gray-500 text-sm">{s.desc}</p>
             </div>
@@ -155,12 +155,12 @@ export default function Home() {
       </section>
 
       {/* Quote */}
-      <section className="bg-indigo-600 text-white py-20">
+      <section className="bg-emerald-700 text-white py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-2xl md:text-3xl font-semibold leading-relaxed mb-6">
             &ldquo;I used to spend Sunday nights overwhelmed, not knowing where to start. I needed something that actually understood my life — not just a blank calendar.&rdquo;
           </p>
-          <p className="text-indigo-200 text-sm">— The problem Inplantoo was built to solve</p>
+          <p className="text-emerald-200 text-sm">— The problem Inplantoo was built to solve</p>
         </div>
       </section>
 

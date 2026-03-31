@@ -12,10 +12,10 @@ export default function WaitlistForm() {
 
   if (submitted) {
     return (
-      <div className="inline-flex flex-col items-center gap-2 bg-indigo-50 border border-indigo-100 rounded-2xl px-10 py-8">
+      <div className="inline-flex flex-col items-center gap-2 bg-green-50 border border-green-100 rounded-2xl px-10 py-8">
         <span className="text-3xl">🎉</span>
         <p className="font-bold text-gray-900 text-lg">You&apos;re on the list!</p>
-        <p className="text-gray-500 text-sm">We&apos;ll email you at <span className="font-medium text-indigo-600">{email}</span> when Inplantoo launches.</p>
+        <p className="text-gray-500 text-sm">We&apos;ll email you at <span className="font-medium text-emerald-600">{email}</span> when Inplantoo launches.</p>
       </div>
     );
   }
@@ -31,11 +31,11 @@ export default function WaitlistForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your .edu email"
-        className="flex-1 px-4 py-3 rounded-xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+        className="flex-1 px-4 py-3 rounded-xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
       />
       <button
         type="submit"
-        className="bg-indigo-600 text-white font-bold px-6 py-3 rounded-xl hover:bg-indigo-700 transition-colors text-sm whitespace-nowrap"
+        className="bg-emerald-700 text-white font-bold px-6 py-3 rounded-xl hover:bg-emerald-800 transition-colors text-sm whitespace-nowrap"
       >
         Get Early Access
       </button>

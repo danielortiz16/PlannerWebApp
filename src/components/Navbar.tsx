@@ -13,8 +13,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-indigo-600 tracking-tight">
-          Inplantoo
+        <Link href="/" className="text-xl font-bold text-emerald-700 tracking-tight">
+          🌿 Inplantoo
         </Link>
 
         {/* Desktop */}
@@ -23,14 +23,14 @@ export default function Navbar() {
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-600 hover:text-indigo-600 transition-colors"
+              className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
             >
               {l.label}
             </Link>
           ))}
           <Link
             href="/#waitlist"
-            className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors"
+            className="bg-emerald-700 text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-emerald-800 transition-colors"
           >
             Join Waitlist
           </Link>
@@ -69,7 +69,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/#waitlist"
-            className="bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-indigo-700"
+            className="bg-emerald-700 text-white text-sm font-medium px-4 py-2 rounded-lg text-center hover:bg-emerald-800"
             onClick={() => setOpen(false)}
           >
             Join Waitlist
