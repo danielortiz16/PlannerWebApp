@@ -3,9 +3,9 @@ import Link from "next/link";
 import { useState } from "react";
 
 const links = [
+  { href: "/about", label: "About" },
   { href: "/#how-it-works", label: "How It Works" },
   { href: "/#priorities", label: "Features" },
-  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
