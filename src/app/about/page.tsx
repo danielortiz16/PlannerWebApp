@@ -44,7 +44,7 @@ export default function AboutPage() {
 
       {/* Video */}
       <section className="py-16 text-center">
-        <h2 className="text-2xl font-extrabold text-gray-900 mb-6">See it in action</h2>
+        <h2 className="text-2xl font-extrabold text-gray-900 mb-6">From the creator</h2>
         <div className="relative mx-auto overflow-hidden rounded-2xl shadow-lg" style={{ width: "320px", paddingTop: "568px" }}>
           <iframe
             className="absolute inset-0 w-full h-full"
