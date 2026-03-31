@@ -42,6 +42,20 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Video */}
+      <section className="py-16 text-center">
+        <h2 className="text-2xl font-extrabold text-gray-900 mb-6">See it in action</h2>
+        <div className="relative mx-auto overflow-hidden rounded-2xl shadow-lg" style={{ width: "320px", paddingTop: "568px" }}>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube.com/embed/JfsN9rSYgT8"
+            title="Inplantoo demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       {/* What makes us different */}
       <section className="max-w-4xl mx-auto px-6 py-20">
         <h2 className="text-2xl font-extrabold text-gray-900 mb-10 text-center">What makes Inplantoo different</h2>
