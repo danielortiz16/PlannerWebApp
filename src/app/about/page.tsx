@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -83,6 +84,23 @@ export default function AboutPage() {
               <p className="text-sm text-gray-500">{item.desc}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Creator */}
+      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 className="text-2xl font-extrabold text-gray-900 mb-2">The Creator</h2>
+        <p className="text-emerald-600 font-semibold text-lg mb-10">Daniel Ortiz</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="overflow-hidden rounded-2xl shadow-md">
+            <Image src="/photo1.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-md">
+            <Image src="/photo2.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-md">
+            <Image src="/photo3.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+          </div>
         </div>
       </section>
 
