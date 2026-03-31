@@ -5,6 +5,7 @@ import { useState } from "react";
 const links = [
   { href: "/#how-it-works", label: "How It Works" },
   { href: "/#priorities", label: "Features" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Navbar() {
