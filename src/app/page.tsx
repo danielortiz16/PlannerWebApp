@@ -28,22 +28,22 @@ const steps = [
   {
     step: "01",
     title: "Upload Your Schedule",
-    desc: "Snap a photo of your class schedule or paste in your courses. Inplantoo reads it instantly.",
+    desc: "Snap a photo of your class schedule or paste in your courses. PlanitPlease reads it instantly.",
   },
   {
     step: "02",
     title: "Set Your Priorities",
-    desc: "Tell Inplantoo what matters most whether that is grades, rest, networking, or anything else. You are in control.",
+    desc: "Tell PlanitPlease what matters most whether that is grades, rest, networking, or anything else. You are in control.",
   },
   {
     step: "03",
     title: "Get Your Plan",
-    desc: "Inplantoo builds a personalized daily schedule around your goals and existing commitments.",
+    desc: "PlanitPlease builds a personalized daily schedule around your goals and existing commitments.",
   },
   {
     step: "04",
     title: "Adapt on the Fly",
-    desc: "Something pop up? Drop it in and Inplantoo automatically rearranges your schedule to keep everything flowing.",
+    desc: "Something pop up? Drop it in and PlanitPlease automatically rearranges your schedule to keep everything flowing.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function Home() {
             <span className="text-lime-300">designed around your life.</span>
           </h1>
           <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto mb-6">
-            Inplantoo helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we will build a personalized daily plan automatically.
+            PlanitPlease helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we will build a personalized daily plan automatically.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm text-green-200">
             <span className="flex items-center gap-2"><span className="text-lime-300">📸</span> Upload your schedule</span>
@@ -107,7 +107,7 @@ export default function Home() {
           Between classes, assignments, clubs, and everything else, it is hard to know where to even start. Most planners give you a blank calendar and wish you luck.
         </p>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-          Inplantoo is different. Snap a photo of your class schedule, tell us what you are working toward, and we will design a realistic daily plan built around your life.
+          PlanitPlease is different. Snap a photo of your class schedule, tell us what you are working toward, and we will design a realistic daily plan built around your life.
         </p>
       </section>
 
@@ -118,7 +118,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
               Your plan, built around your goals
             </h2>
-            <p className="text-gray-500 text-lg">Pick what matters most. Inplantoo does the scheduling.</p>
+            <p className="text-gray-500 text-lg">Pick what matters most. PlanitPlease does the scheduling.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {priorities.map((p) => (
@@ -160,7 +160,7 @@ export default function Home() {
           <p className="text-2xl md:text-3xl font-semibold leading-relaxed mb-6">
             &ldquo;I used to spend Sunday nights overwhelmed, not knowing where to start. I needed something that actually understood my life and not just a blank calendar.&rdquo;
           </p>
-          <p className="text-emerald-200 text-sm">The problem Inplantoo was built to solve</p>
+          <p className="text-emerald-200 text-sm">The problem PlanitPlease was built to solve</p>
         </div>
       </section>
 
@@ -170,7 +170,7 @@ export default function Home() {
           Ready to get your time back?
         </h2>
         <p className="text-gray-500 text-lg mb-10 max-w-xl mx-auto">
-          Join students already on the waitlist. Be the first to get access when Inplantoo launches.
+          Join students already on the waitlist. Be the first to get access when PlanitPlease launches.
         </p>
         <WaitlistForm />
       </section>

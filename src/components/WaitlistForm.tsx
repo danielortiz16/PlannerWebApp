@@ -16,7 +16,7 @@ export default function WaitlistForm() {
       <div className="inline-flex flex-col items-center gap-2 bg-green-50 border border-green-100 rounded-2xl px-10 py-8">
         <span className="text-3xl">🎉</span>
         <p className="font-bold text-gray-900 text-lg">You&apos;re on the list, {name}!</p>
-        <p className="text-gray-500 text-sm">We&apos;ll email you at <span className="font-medium text-emerald-600">{email}</span> when Inplantoo launches.</p>
+        <p className="text-gray-500 text-sm">We&apos;ll email you at <span className="font-medium text-emerald-600">{email}</span> when PlanitPlease launches.</p>
       </div>
     );
   }

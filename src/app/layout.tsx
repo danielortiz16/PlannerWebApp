@@ -10,9 +10,9 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Inplantoo — The Smarter Planner for College Students",
+  title: "PlanitPlease — The Smarter Planner for College Students",
   description:
-    "Inplantoo helps overwhelmed college students build priority-driven schedules that adapt in real time. Upload your class schedule, set your goals, and let Inplantoo do the rest.",
+    "PlanitPlease helps overwhelmed college students build priority-driven schedules that adapt in real time. Upload your class schedule, set your goals, and let PlanitPlease do the rest.",
 };
 
 export default function RootLayout({

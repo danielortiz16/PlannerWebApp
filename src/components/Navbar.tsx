@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="text-xl font-bold text-emerald-700 tracking-tight">
-          🌿 Inplantoo
+          🌿 PlanitPlease
         </Link>
 
         {/* Desktop */}
