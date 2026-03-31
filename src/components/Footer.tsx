@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-gray-950 text-gray-400 py-12 mt-auto">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
         <div>
-          <p className="text-white font-bold text-lg mb-2">Align</p>
+          <p className="text-white font-bold text-lg mb-2">Inplantoo</p>
           <p className="text-sm max-w-xs">
             A smarter planner built for college students who have too much going on.
           </p>
@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-6xl mx-auto px-6 mt-10 pt-6 border-t border-gray-800 text-xs text-gray-600">
-        © {new Date().getFullYear()} Align. All rights reserved.
+        © {new Date().getFullYear()} Inplantoo. All rights reserved.
       </div>
     </footer>
   );

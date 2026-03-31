@@ -28,22 +28,22 @@ const steps = [
   {
     step: "01",
     title: "Upload Your Schedule",
-    desc: "Snap a photo of your class schedule or paste in your courses. Align reads it instantly.",
+    desc: "Snap a photo of your class schedule or paste in your courses. Inplantoo reads it instantly.",
   },
   {
     step: "02",
     title: "Set Your Priorities",
-    desc: "Tell Align what matters most — grades, rest, networking, or anything else. You're in control.",
+    desc: "Tell Inplantoo what matters most — grades, rest, networking, or anything else. You're in control.",
   },
   {
     step: "03",
     title: "Get Your Plan",
-    desc: "Align builds a personalized weekly schedule around your goals and existing commitments.",
+    desc: "Inplantoo builds a personalized weekly schedule around your goals and existing commitments.",
   },
   {
     step: "04",
     title: "Adapt on the Fly",
-    desc: "Something pop up? Drop it in. Align automatically rearranges your schedule to keep everything flowing.",
+    desc: "Something pop up? Drop it in. Inplantoo automatically rearranges your schedule to keep everything flowing.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function Home() {
             <span className="text-yellow-300">Start living on purpose.</span>
           </h1>
           <p className="text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto mb-10">
-            Align is the AI-powered planner that builds your schedule around <em>your</em> priorities — then adapts in real time when life inevitably changes.
+            Inplantoo is the AI-powered planner that builds your schedule around <em>your</em> priorities — then adapts in real time when life inevitably changes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -102,7 +102,7 @@ export default function Home() {
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">
           Generic to-do apps don&apos;t know you want better grades more than you want to go to the gym. They don&apos;t know your Tuesday is insane but Friday is free. And they definitely don&apos;t help when an exam gets moved or a group project explodes.
         </p>
-        <p className="text-gray-800 font-semibold text-lg mt-6">Align does.</p>
+        <p className="text-gray-800 font-semibold text-lg mt-6">Inplantoo does.</p>
       </section>
 
       {/* Priorities */}
@@ -112,7 +112,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
               Your plan, built around your goals
             </h2>
-            <p className="text-gray-500 text-lg">Pick what matters most. Align does the scheduling.</p>
+            <p className="text-gray-500 text-lg">Pick what matters most. Inplantoo does the scheduling.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {priorities.map((p) => (
@@ -154,7 +154,7 @@ export default function Home() {
           <p className="text-2xl md:text-3xl font-semibold leading-relaxed mb-6">
             &ldquo;I used to spend Sunday nights overwhelmed, not knowing where to start. I needed something that actually understood my life — not just a blank calendar.&rdquo;
           </p>
-          <p className="text-indigo-200 text-sm">— The problem Align was built to solve</p>
+          <p className="text-indigo-200 text-sm">— The problem Inplantoo was built to solve</p>
         </div>
       </section>
 
@@ -164,7 +164,7 @@ export default function Home() {
           Ready to get your time back?
         </h2>
         <p className="text-gray-500 text-lg mb-10 max-w-xl mx-auto">
-          Join students already on the waitlist. Be the first to get access when Align launches.
+          Join students already on the waitlist. Be the first to get access when Inplantoo launches.
         </p>
         <WaitlistForm />
       </section>
