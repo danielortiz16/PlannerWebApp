@@ -22,13 +22,13 @@ export default function AboutPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-2xl font-extrabold text-gray-900 mb-4">The problem we lived</h2>
         <p className="text-gray-500 text-lg leading-relaxed mb-4">
-          College is exciting — but it&apos;s also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it&apos;s nearly impossible to feel like you have it together. Most students don&apos;t lack motivation. They lack a system that actually works for them.
+          College is exciting but it&apos;s also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it&apos;s nearly impossible to feel like you have it together. Most students don&apos;t lack motivation. They just need a system that actually works for them.
         </p>
         <p className="text-gray-500 text-lg leading-relaxed mb-4">
-          We tried every planner, app, and productivity system out there. They were either too rigid, too complicated, or completely ignored the fact that life doesn&apos;t follow a perfect schedule. One unexpected assignment or a study session that runs long and the whole plan falls apart.
+          We tried every planner, app, and productivity system out there. They were all either too rigid, too complicated, or completely ignored the fact that life doesn&apos;t follow a perfect schedule. One unexpected assignment or a study session that runs long and the whole plan falls apart.
         </p>
         <p className="text-gray-500 text-lg leading-relaxed">
-          So we built Inplantoo — a planner that starts with <em>you</em>. Upload your schedule, tell it what matters most, and let it do the heavy lifting of figuring out your day.
+          So we built Inplantoo. A planner that starts with <em>you</em>. Upload your schedule, tell it what matters most, and let it figure out the rest.
         </p>
       </section>
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="text-2xl font-extrabold text-gray-900 mb-4">Our mission</h2>
           <p className="text-gray-600 text-xl leading-relaxed">
-            Help every college student spend their time on what actually matters to them — not just what&apos;s due next.
+            Help every college student spend their time on what actually matters to them and not just whatever is due next.
           </p>
         </div>
       </section>
@@ -50,17 +50,17 @@ export default function AboutPage() {
             {
               icon: "📸",
               title: "Starts with your real schedule",
-              desc: "Just upload a photo of your class schedule. No manual entry, no setup friction.",
+              desc: "Just upload a photo of your class schedule. No manual entry, no complicated setup.",
             },
             {
               icon: "🎯",
               title: "Built around your priorities",
-              desc: "You choose what matters — grades, rest, networking, fitness. Inplantoo builds your plan around that.",
+              desc: "You pick what matters most whether that is grades, rest, networking, or fitness. Inplantoo builds your plan around that.",
             },
             {
               icon: "⚡",
               title: "Adapts when things change",
-              desc: "Life happens. Add a task and your whole plan reshuffles automatically — no chaos, no stress.",
+              desc: "Life happens. Add a task and your whole plan reshuffles automatically so nothing falls through the cracks.",
             },
           ].map((item) => (
             <div key={item.title} className="text-center">

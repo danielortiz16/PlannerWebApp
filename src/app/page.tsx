@@ -15,7 +15,7 @@ const priorities = [
   {
     icon: "😴",
     label: "Rest & Recovery",
-    desc: "Protect sleep and downtime so you can show up recharged — not burned out.",
+    desc: "Protect sleep and downtime so you can show up recharged and not burned out.",
   },
   {
     icon: "💪",
@@ -33,7 +33,7 @@ const steps = [
   {
     step: "02",
     title: "Set Your Priorities",
-    desc: "Tell Inplantoo what matters most — grades, rest, networking, or anything else. You're in control.",
+    desc: "Tell Inplantoo what matters most whether that is grades, rest, networking, or anything else. You are in control.",
   },
   {
     step: "03",
@@ -43,7 +43,7 @@ const steps = [
   {
     step: "04",
     title: "Adapt on the Fly",
-    desc: "Something pop up? Drop it in. Inplantoo automatically rearranges your schedule to keep everything flowing.",
+    desc: "Something pop up? Drop it in and Inplantoo automatically rearranges your schedule to keep everything flowing.",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function Home() {
             <span className="text-lime-300">designed around your life.</span>
           </h1>
           <p className="text-lg md:text-xl text-green-100 max-w-2xl mx-auto mb-6">
-            Inplantoo helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we&apos;ll build a personalized daily plan — automatically.
+            Inplantoo helps college students plan their day without the stress. Just <strong className="text-white">upload a photo of your class schedule</strong>, tell us your goals, and we will build a personalized daily plan automatically.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-10 text-sm text-green-200">
             <span className="flex items-center gap-2"><span className="text-lime-300">📸</span> Upload your schedule</span>
@@ -74,7 +74,7 @@ export default function Home() {
               href="/#waitlist"
               className="bg-lime-400 text-gray-900 font-bold px-8 py-4 rounded-xl hover:bg-lime-300 transition-colors text-lg shadow-lg"
             >
-              Join the Waitlist — Free
+              Join the Waitlist for Free
             </Link>
             <Link
               href="/#how-it-works"
@@ -104,10 +104,10 @@ export default function Home() {
           College is busy. <span className="text-emerald-600">Your planner should keep up.</span>
         </h2>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto mb-4">
-          Between classes, assignments, clubs, and everything else, it&apos;s hard to know where to even start. Most planners give you a blank calendar and wish you luck.
+          Between classes, assignments, clubs, and everything else, it is hard to know where to even start. Most planners give you a blank calendar and wish you luck.
         </p>
         <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-          Inplantoo is different. Snap a photo of your class schedule, tell us what you&apos;re working toward, and we&apos;ll design a realistic daily plan built around <em>your</em> life.
+          Inplantoo is different. Snap a photo of your class schedule, tell us what you are working toward, and we will design a realistic daily plan built around your life.
         </p>
       </section>
 
@@ -158,9 +158,9 @@ export default function Home() {
       <section className="bg-emerald-700 text-white py-20">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="text-2xl md:text-3xl font-semibold leading-relaxed mb-6">
-            &ldquo;I used to spend Sunday nights overwhelmed, not knowing where to start. I needed something that actually understood my life — not just a blank calendar.&rdquo;
+            &ldquo;I used to spend Sunday nights overwhelmed, not knowing where to start. I needed something that actually understood my life and not just a blank calendar.&rdquo;
           </p>
-          <p className="text-emerald-200 text-sm">— The problem Inplantoo was built to solve</p>
+          <p className="text-emerald-200 text-sm">The problem Inplantoo was built to solve</p>
         </div>
       </section>
 
