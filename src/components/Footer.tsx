@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-[#05050f] text-slate-500 py-12 mt-auto border-t border-indigo-950">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
         <div>
-          <p className="text-yellow-300 font-bold text-lg mb-2">🪐 PlanitPlease</p>
+          <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={100} height={34} className="h-9 w-auto rounded-md mb-2" />
           <p className="text-sm max-w-xs">A smarter planner built for college students who have too much going on.</p>
         </div>
         <div className="flex gap-12 text-sm">
