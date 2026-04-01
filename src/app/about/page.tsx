@@ -11,8 +11,8 @@ export default function AboutPage() {
           <span className="inline-block bg-indigo-900/60 border border-indigo-700 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-widest">
             About
           </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Why we built PlanitPlease</h1>
-          <p className="text-slate-400 text-lg">A planner built by students, for students.</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Why we built <span className="text-yellow-300">PlanitPlease</span></h1>
+          <p className="text-slate-400 text-lg">A planner built by <span className="text-yellow-300 font-semibold">students</span>, for <span className="text-yellow-300 font-semibold">students</span>.</p>
         </div>
       </section>
 
@@ -20,13 +20,13 @@ export default function AboutPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-2xl font-extrabold text-white mb-4">The problem we lived</h2>
         <p className="text-slate-400 text-lg leading-relaxed mb-4">
-          College is exciting but it is also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it is nearly impossible to feel like you have it together. Most students do not lack motivation. They just need a system that actually works for them.
+          College is exciting but it is also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it is nearly impossible to feel like you have it together. Most students do not lack motivation. They just need <span className="text-yellow-300 font-semibold">a system that actually works for them</span>.
         </p>
         <p className="text-slate-400 text-lg leading-relaxed mb-4">
           We tried every planner, app, and productivity system out there. They were all either too rigid, too complicated, or completely ignored the fact that life does not follow a perfect schedule. One unexpected assignment or a study session that runs long and the whole plan falls apart.
         </p>
         <p className="text-slate-400 text-lg leading-relaxed">
-          So we built PlanitPlease. A planner that starts with <em>you</em>. Upload your schedule, tell it what matters most, and let it figure out the rest.
+          So we built PlanitPlease. A planner that starts with <span className="text-yellow-300 font-semibold">you</span>. Upload your schedule, tell it what matters most, and let it figure out the rest.
         </p>
 
         {/* Encouraging callout */}
@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="text-4xl mb-4">🌌</div>
           <h2 className="text-2xl font-extrabold text-white mb-4">Our mission</h2>
           <p className="text-slate-300 text-xl leading-relaxed">
-            Help every college student spend their time on what actually matters to them and not just whatever is due next.
+            Help every college student spend their time on <span className="text-yellow-300 font-semibold">what actually matters to them</span> and not just whatever is due next.
           </p>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-extrabold text-white mb-1">The Creator</h2>
           <p className="text-yellow-300 font-semibold text-lg mb-3">Daniel Ortiz</p>
           <p className="text-slate-400 max-w-xl mx-auto mb-12">
-            A college student who got tired of feeling behind and decided to build something better. PlanitPlease is personal because the problem was personal.
+            A college student who got tired of feeling behind and decided to <span className="text-yellow-300 font-semibold">build something better</span>. PlanitPlease is personal because the problem was personal.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="group overflow-hidden rounded-2xl shadow-xl border-2 border-indigo-700 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
@@ -116,7 +116,7 @@ export default function AboutPage() {
               <Image src="/photo3.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
             </div>
           </div>
-          <p className="text-slate-500 text-sm mt-8 italic">Building the tool I wish I had from day one.</p>
+          <p className="text-yellow-300/70 text-sm mt-8 italic">Building the tool I wish I had from day one.</p>
         </div>
       </section>
 
