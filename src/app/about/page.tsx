@@ -20,14 +20,21 @@ export default function AboutPage() {
       <section className="max-w-3xl mx-auto px-6 py-20">
         <h2 className="text-2xl font-extrabold text-white mb-4">The problem we lived</h2>
         <p className="text-slate-400 text-lg leading-relaxed mb-4">
-          College is exciting but it&apos;s also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it&apos;s nearly impossible to feel like you have it together. Most students don&apos;t lack motivation. They just need a system that actually works for them.
+          College is exciting but it is also overwhelming. Between classes, assignments, clubs, social life, and trying to sleep, it is nearly impossible to feel like you have it together. Most students do not lack motivation. They just need a system that actually works for them.
         </p>
         <p className="text-slate-400 text-lg leading-relaxed mb-4">
-          We tried every planner, app, and productivity system out there. They were all either too rigid, too complicated, or completely ignored the fact that life doesn&apos;t follow a perfect schedule. One unexpected assignment or a study session that runs long and the whole plan falls apart.
+          We tried every planner, app, and productivity system out there. They were all either too rigid, too complicated, or completely ignored the fact that life does not follow a perfect schedule. One unexpected assignment or a study session that runs long and the whole plan falls apart.
         </p>
         <p className="text-slate-400 text-lg leading-relaxed">
           So we built PlanitPlease. A planner that starts with <em>you</em>. Upload your schedule, tell it what matters most, and let it figure out the rest.
         </p>
+
+        {/* Encouraging callout */}
+        <div className="mt-10 bg-indigo-950 border border-indigo-700 rounded-2xl p-6 text-center">
+          <p className="text-yellow-300 text-xl font-semibold">
+            You are capable of more than you think. You just need the right plan.
+          </p>
+        </div>
       </section>
 
       {/* Mission */}
@@ -41,10 +48,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Encouraging stats */}
+      <section className="max-w-4xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          {[
+            { stat: "1 upload", label: "That is all it takes to get started" },
+            { stat: "Your goals", label: "Not someone else's template" },
+            { stat: "Zero stress", label: "We handle the scheduling so you do not have to" },
+          ].map((item) => (
+            <div key={item.stat} className="bg-indigo-950 border border-indigo-800 rounded-2xl p-8">
+              <p className="text-yellow-300 text-2xl font-extrabold mb-2">{item.stat}</p>
+              <p className="text-slate-400 text-sm">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Video */}
       <section className="py-16 text-center">
-        <h2 className="text-2xl font-extrabold text-white mb-6">From the creator</h2>
-        <div className="relative mx-auto overflow-hidden rounded-2xl shadow-lg border border-indigo-800" style={{ width: "320px", paddingTop: "568px" }}>
+        <h2 className="text-2xl font-extrabold text-white mb-2">From the creator</h2>
+        <p className="text-slate-400 mb-8 max-w-md mx-auto">Hear directly from Daniel on why he built PlanitPlease and what he wants it to mean for students like you.</p>
+        <div className="relative mx-auto overflow-hidden rounded-2xl shadow-lg border border-indigo-700" style={{ width: "320px", paddingTop: "568px" }}>
           <iframe
             className="absolute inset-0 w-full h-full"
             src="https://www.youtube.com/embed/JfsN9rSYgT8"
@@ -74,25 +98,32 @@ export default function AboutPage() {
       </section>
 
       {/* Creator */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-2xl font-extrabold text-white mb-2">The Creator</h2>
-        <p className="text-yellow-300 font-semibold text-lg mb-10">Daniel Ortiz</p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="overflow-hidden rounded-2xl shadow-md border border-indigo-800">
-            <Image src="/photo1.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+      <section className="bg-indigo-950 border-y border-indigo-900 py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-extrabold text-white mb-1">The Creator</h2>
+          <p className="text-yellow-300 font-semibold text-lg mb-3">Daniel Ortiz</p>
+          <p className="text-slate-400 max-w-xl mx-auto mb-12">
+            A college student who got tired of feeling behind and decided to build something better. PlanitPlease is personal — because the problem was personal.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="group overflow-hidden rounded-2xl shadow-xl border-2 border-indigo-700 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
+              <Image src="/photo1.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+            </div>
+            <div className="group overflow-hidden rounded-2xl shadow-xl border-2 border-indigo-700 hover:border-yellow-400 transition-all duration-300 hover:scale-105 sm:mt-8">
+              <Image src="/photo2.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+            </div>
+            <div className="group overflow-hidden rounded-2xl shadow-xl border-2 border-indigo-700 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
+              <Image src="/photo3.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
+            </div>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-md border border-indigo-800">
-            <Image src="/photo2.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
-          </div>
-          <div className="overflow-hidden rounded-2xl shadow-md border border-indigo-800">
-            <Image src="/photo3.jpeg" alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top" />
-          </div>
+          <p className="text-slate-500 text-sm mt-8 italic">Building the tool I wish I had from day one.</p>
         </div>
       </section>
 
       {/* CTA */}
       <section className="bg-indigo-900 text-white py-20 text-center">
         <div className="max-w-2xl mx-auto px-6">
+          <p className="text-yellow-300 font-semibold text-lg mb-3">Your best semester starts with a better plan.</p>
           <h2 className="text-3xl font-extrabold mb-4">Ready to try it?</h2>
           <p className="text-indigo-300 mb-8">Join the waitlist and be first in line when PlanitPlease launches.</p>
           <Link href="/#waitlist" className="inline-block bg-yellow-400 text-gray-900 font-bold px-10 py-4 rounded-xl hover:bg-yellow-300 transition-colors text-lg">
