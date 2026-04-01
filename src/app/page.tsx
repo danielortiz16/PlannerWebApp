@@ -25,7 +25,7 @@ export default function Home() {
         <div className="absolute inset-0 opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJ3aGl0ZSI+PGNpcmNsZSBjeD0iNTAiIGN5PSI1MCIgcj0iMSIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjgwIiByPSIxLjUiLz48Y2lyY2xlIGN4PSIyNTAiIGN5PSIzMCIgcj0iMSIvPjxjaXJjbGUgY3g9IjM1MCIgY3k9IjEyMCIgcj0iMSIvPjxjaXJjbGUgY3g9IjgwIiBjeT0iMTgwIiByPSIxIi8+PGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxLjUiLz48Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNTAiIHI9IjEiLz48Y2lyY2xlIGN4PSIxMDAiIGN5PSIzMDAiIHI9IjEiLz48Y2lyY2xlIGN4PSIzNTAiIGN5PSIzNTAiIHI9IjEuNSIvPjwvZz48L3N2Zz4=')]" />
         <div className="relative max-w-6xl mx-auto px-6 py-32 text-center">
           <div className="flex justify-center mb-8">
-            <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={160} height={54} className="h-16 w-auto rounded-xl" />
+            <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={120} height={40} className="h-12 w-auto rounded-xl" />
           </div>
           <span className="inline-block bg-indigo-900/60 border border-indigo-700 text-indigo-300 text-xs font-semibold px-3 py-1 rounded-full mb-6 uppercase tracking-widest">
             🚀 Built for college students
