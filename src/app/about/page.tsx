@@ -103,7 +103,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-extrabold text-white mb-1">The Creator</h2>
           <p className="text-yellow-300 font-semibold text-lg mb-3">Daniel Ortiz</p>
           <p className="text-slate-400 max-w-xl mx-auto mb-12">
-            A college student who got tired of feeling behind and decided to build something better. PlanitPlease is personal — because the problem was personal.
+            A college student who got tired of feeling behind and decided to build something better. PlanitPlease is personal because the problem was personal.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="group overflow-hidden rounded-2xl shadow-xl border-2 border-indigo-700 hover:border-yellow-400 transition-all duration-300 hover:scale-105">
