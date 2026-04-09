@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/danielnunez/PlannerWebApp && git diff --quiet && git diff --cached --quiet || (git add -A && git commit -m \"Auto-save changes\" && git push origin main) 2>/dev/null || true",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

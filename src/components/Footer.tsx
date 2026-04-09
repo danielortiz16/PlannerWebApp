@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="bg-white border-t border-[#E8E3F5] text-[#9E99B0] py-12 mt-auto">
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between gap-8">
         <div>
-          <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={100} height={34} className="h-9 w-auto rounded-md mb-3" />
+          <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={100} height={34} className="h-9 w-auto mb-3" />
           <p className="text-sm max-w-xs leading-relaxed">A smarter planner built for college students who have too much going on.</p>
         </div>
         <div className="flex gap-12 text-sm">

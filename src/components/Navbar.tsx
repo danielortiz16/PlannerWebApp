@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-[#E8E3F5]">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={120} height={40} className="h-10 w-auto rounded-md" />
+          <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={120} height={40} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop */}
@@ -27,7 +27,7 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link href="/#waitlist" className="bg-violet-600 text-white text-sm font-semibold px-5 py-2 rounded-lg hover:bg-violet-700 transition-colors">
+          <Link href="/#waitlist" className="bg-violet-600 text-white text-sm font-semibold px-5 py-2 hover:bg-violet-700 transition-colors">
             Join Waitlist
           </Link>
         </div>
@@ -53,7 +53,7 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link href="/#waitlist" className="bg-violet-600 text-white text-sm font-semibold px-5 py-2.5 rounded-lg text-center hover:bg-violet-700" onClick={() => setOpen(false)}>
+          <Link href="/#waitlist" className="bg-violet-600 text-white text-sm font-semibold px-5 py-2.5 text-center hover:bg-violet-700" onClick={() => setOpen(false)}>
             Join Waitlist
           </Link>
         </div>

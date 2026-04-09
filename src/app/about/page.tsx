@@ -32,7 +32,7 @@ export default function AboutPage() {
           So we built PlanitPlease. A planner that starts with <span className="text-violet-600 font-semibold">you</span>. Upload your schedule, tell it what matters most, and let it figure out the rest.
         </p>
 
-        <div className="animate-scale-in delay-400 mt-10 bg-violet-50 border border-violet-200 rounded-2xl p-8 text-center">
+        <div className="animate-scale-in delay-400 mt-10 bg-violet-50 border border-violet-200 p-8 text-center">
           <p className="text-violet-700 text-xl font-semibold leading-relaxed">
             You are capable of more than you think. You just need the right plan.
           </p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
           ].map((item) => (
             <div
               key={item.stat}
-              className="animate-fade-in-up bg-white border border-[#E8E3F5] rounded-2xl p-8 hover:border-violet-300 hover:-translate-y-1 transition-all duration-300"
+              className="animate-fade-in-up bg-white border border-[#E8E3F5] p-8 hover:border-violet-300 hover:-translate-y-1 transition-all duration-300"
               style={{ animationDelay: item.delay }}
             >
               <p className="text-violet-600 text-2xl font-extrabold mb-2">{item.stat}</p>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           <p className="text-violet-600 text-sm font-semibold uppercase tracking-widest mb-3">From the creator</p>
           <h2 className="text-2xl font-extrabold text-[#1C1626] mb-2">Hear it directly</h2>
           <p className="text-[#6B6580] mb-8">Daniel shares why he built PlanitPlease and what he wants it to mean for students like you.</p>
-          <div className="animate-scale-in relative mx-auto overflow-hidden rounded-2xl shadow-lg border border-[#E8E3F5]" style={{ width: "320px", paddingTop: "568px" }}>
+          <div className="animate-scale-in relative mx-auto overflow-hidden shadow-lg border border-[#E8E3F5]" style={{ width: "320px", paddingTop: "568px" }}>
             <iframe
               className="absolute inset-0 w-full h-full"
               src="https://www.youtube.com/embed/JfsN9rSYgT8"
@@ -136,10 +136,10 @@ export default function AboutPage() {
           ].map((item) => (
             <div
               key={item.title}
-              className="animate-fade-in-up text-center bg-white border border-[#E8E3F5] rounded-2xl p-7 hover:border-violet-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="animate-fade-in-up text-center bg-white border border-[#E8E3F5] p-7 hover:border-violet-300 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               style={{ animationDelay: item.delay }}
             >
-              <div className={`w-12 h-12 ${item.iconBg} ${item.iconColor} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+              <div className={`w-12 h-12 ${item.iconBg} ${item.iconColor} flex items-center justify-center mx-auto mb-4`}>
                 {item.icon}
               </div>
               <h3 className="font-bold text-[#1C1626] mb-2">{item.title}</h3>
@@ -161,7 +161,7 @@ export default function AboutPage() {
             {["/photo1.jpeg", "/photo2.jpeg", "/photo3.jpeg"].map((src, i) => (
               <div
                 key={src}
-                className="animate-fade-in-up group overflow-hidden rounded-2xl shadow-sm border-2 border-[#E8E3F5] hover:border-violet-400 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="animate-fade-in-up group overflow-hidden shadow-sm border-2 border-[#E8E3F5] hover:border-violet-400 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 style={{ animationDelay: `${i * 0.1}s`, marginTop: i === 1 ? "2rem" : "0" }}
               >
                 <Image src={src} alt="Daniel Ortiz" width={400} height={500} className="w-full h-80 object-cover object-top transition-transform duration-500 group-hover:scale-105" />
@@ -179,7 +179,7 @@ export default function AboutPage() {
           <h2 className="text-3xl font-extrabold mb-4 animate-fade-in-up delay-100">Ready to try it?</h2>
           <p className="text-violet-300 mb-8 animate-fade-in-up delay-200">Join the waitlist and be first in line when PlanitPlease launches.</p>
           <div className="animate-fade-in-up delay-300">
-            <Link href="/#waitlist" className="inline-block bg-white text-violet-700 font-bold px-10 py-4 rounded-xl hover:bg-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md text-lg shadow-sm">
+            <Link href="/#waitlist" className="inline-block bg-white text-violet-700 font-bold px-10 py-4 hover:bg-violet-50 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md text-lg shadow-sm">
               Join the Waitlist
             </Link>
           </div>

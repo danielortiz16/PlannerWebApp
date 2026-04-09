@@ -41,7 +41,7 @@ export default function Home() {
             {/* Left */}
             <div className="flex-1 text-center md:text-left">
               <div className="flex justify-center md:justify-start mb-8">
-                <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={240} height={80} className="h-20 w-auto rounded-xl" />
+                <Image src="/Logo 1.jpeg" alt="PlanitPlease" width={240} height={80} className="h-20 w-auto" />
               </div>
 
               <span className="inline-flex items-center gap-1.5 bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-5 uppercase tracking-widest animate-pulse-soft">
@@ -66,9 +66,9 @@ export default function Home() {
             {/* Right — floating schedule card + notification badge */}
             <div className="flex-1 hidden md:flex justify-center">
               <div className="relative w-72 animate-float">
-                <div className="absolute -top-4 -right-4 w-full h-full bg-violet-200/50 rounded-3xl animate-float-slow delay-200" />
-                <div className="absolute -top-2 -right-2 w-full h-full bg-violet-300/30 rounded-3xl animate-float-slow delay-400" />
-                <div className="relative bg-white rounded-3xl shadow-xl border border-violet-100 p-6 space-y-3">
+                <div className="absolute -top-4 -right-4 w-full h-full bg-violet-200/50 animate-float-slow delay-200" />
+                <div className="absolute -top-2 -right-2 w-full h-full bg-violet-300/30 animate-float-slow delay-400" />
+                <div className="relative bg-white shadow-xl border border-violet-100 p-6 space-y-3">
                   <div className="flex items-center gap-2 mb-4">
                     <div className="w-2.5 h-2.5 rounded-full bg-rose-300 animate-pulse-soft" />
                     <div className="w-2.5 h-2.5 rounded-full bg-amber-300 animate-pulse-soft delay-200" />
@@ -84,13 +84,13 @@ export default function Home() {
                   ].map((item, i) => (
                     <div key={item.time} className="flex items-center gap-3 animate-pulse-soft" style={{ animationDelay: `${i * 0.4}s` }}>
                       <span className="text-[10px] text-[#B0ABC4] font-mono w-16 shrink-0">{item.time}</span>
-                      <span className={`text-xs font-semibold px-3 py-1.5 rounded-lg flex-1 ${item.color}`}>{item.label}</span>
+                      <span className={`text-xs font-semibold px-3 py-1.5 flex-1 ${item.color}`}>{item.label}</span>
                     </div>
                   ))}
                 </div>
 
                 {/* Floating notification toast */}
-                <div className="absolute -bottom-8 -left-10 bg-white border border-emerald-100 rounded-2xl shadow-lg px-4 py-3 flex items-center gap-3 w-52 animate-float-slow delay-600">
+                <div className="absolute -bottom-8 -left-10 bg-white border border-emerald-100 shadow-lg px-4 py-3 flex items-center gap-3 w-52 animate-float-slow delay-600">
                   <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center shrink-0">
                     <svg className="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -192,9 +192,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-auto">
 
             {/* Wide card — upload */}
-            <div className="md:col-span-2 bg-white rounded-3xl border border-[#E8E3F5] p-8 flex flex-col md:flex-row gap-8 items-center overflow-hidden relative group hover:border-violet-200 hover:shadow-lg transition-all duration-300">
+            <div className="md:col-span-2 bg-white border border-[#E8E3F5] p-8 flex flex-col md:flex-row gap-8 items-center overflow-hidden relative group hover:border-violet-200 hover:shadow-lg transition-all duration-300">
               <div className="shrink-0">
-                <div className="w-14 h-14 bg-violet-100 rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-14 h-14 bg-violet-100 flex items-center justify-center mb-4">
                   <svg className="w-7 h-7 text-violet-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -205,21 +205,21 @@ export default function Home() {
               </div>
               {/* Mini visual */}
               <div className="flex-1 flex justify-center md:justify-end">
-                <div className="w-40 h-28 bg-violet-50 rounded-2xl border-2 border-dashed border-violet-200 flex items-center justify-center">
+                <div className="w-40 h-28 bg-violet-50 border-2 border-dashed border-violet-200 flex items-center justify-center">
                   <svg className="w-10 h-10 text-violet-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4-4a3 3 0 014.24 0L16 16m-2-2l1.586-1.586a3 3 0 014.242 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
               </div>
               {/* Hover accent */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-400 to-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-3xl" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-violet-400 to-indigo-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             </div>
 
             {/* Tall card — AI */}
-            <div className="bg-[#1C1626] rounded-3xl border border-white/5 p-8 flex flex-col justify-between group hover:border-violet-800 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+            <div className="bg-[#1C1626] border border-white/5 p-8 flex flex-col justify-between group hover:border-violet-800 hover:shadow-xl transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-violet-600/10 rounded-full blur-2xl" />
               <div>
-                <div className="w-10 h-10 bg-violet-900/60 border border-violet-700/40 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-violet-900/60 border border-violet-700/40 flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
@@ -234,7 +234,7 @@ export default function Home() {
                     {[...Array(3)].map((_, j) => (
                       <div
                         key={j}
-                        className="h-2 rounded-sm bg-violet-700/40 animate-pulse-soft"
+                        className="h-2 bg-violet-700/40 animate-pulse-soft"
                         style={{ animationDelay: `${(i + j) * 0.15}s`, opacity: 0.4 + j * 0.2 }}
                       />
                     ))}
@@ -244,9 +244,9 @@ export default function Home() {
             </div>
 
             {/* Small card — priorities */}
-            <div className="bg-white rounded-3xl border border-[#E8E3F5] p-7 group hover:border-violet-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white border border-[#E8E3F5] p-7 group hover:border-violet-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
               <div className="absolute bottom-0 right-0 w-24 h-24 bg-violet-100/50 rounded-full blur-xl" />
-              <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-emerald-100 flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -261,9 +261,9 @@ export default function Home() {
             </div>
 
             {/* Small card — adapts */}
-            <div className="bg-white rounded-3xl border border-[#E8E3F5] p-7 group hover:border-violet-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+            <div className="bg-white border border-[#E8E3F5] p-7 group hover:border-violet-200 hover:shadow-lg transition-all duration-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-20 h-20 bg-sky-100/50 rounded-full blur-xl" />
-              <div className="w-10 h-10 bg-sky-100 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-10 h-10 bg-sky-100 flex items-center justify-center mb-4">
                 <svg className="w-5 h-5 text-sky-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
@@ -273,7 +273,7 @@ export default function Home() {
             </div>
 
             {/* Wide card — before/after */}
-            <div className="md:col-span-1 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-3xl p-8 text-white group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
+            <div className="md:col-span-1 bg-gradient-to-br from-violet-600 to-indigo-600 p-8 text-white group hover:shadow-xl transition-all duration-300 relative overflow-hidden">
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/10 rounded-full" />
               <p className="text-violet-200 text-xs font-bold uppercase tracking-widest mb-3">The result</p>
               <p className="text-2xl font-extrabold leading-snug mb-4">Less chaos.<br />More you.</p>
@@ -305,7 +305,7 @@ export default function Home() {
             {priorities.map((p, i) => (
               <div
                 key={p.label}
-                className="group relative bg-[#FAFAF8] rounded-2xl p-6 border border-[#E8E3F5] hover:border-violet-300 hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
+                className="group relative bg-[#FAFAF8] p-6 border border-[#E8E3F5] hover:border-violet-300 hover:shadow-lg hover:-translate-y-2 transition-all duration-300"
               >
                 <span
                   aria-hidden
@@ -313,7 +313,7 @@ export default function Home() {
                 >
                   {p.num}
                 </span>
-                <div className={`w-8 h-8 rounded-lg ${p.color} flex items-center justify-center mb-4 animate-scale-pulse`} style={{ animationDelay: `${i * 0.4}s` }}>
+                <div className={`w-8 h-8 ${p.color} flex items-center justify-center mb-4 animate-scale-pulse`} style={{ animationDelay: `${i * 0.4}s` }}>
                   <div className={`w-2 h-2 rounded-full ${p.dot}`} />
                 </div>
                 <h3 className="font-bold text-[#1C1626] mb-2 relative z-10">{p.label}</h3>
@@ -356,7 +356,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Before */}
-            <div className="bg-white rounded-3xl border-2 border-rose-100 p-8">
+            <div className="bg-white border-2 border-rose-100 p-8">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-6 h-6 rounded-full bg-rose-100 flex items-center justify-center shrink-0">
                   <svg className="w-3 h-3 text-rose-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -382,7 +382,7 @@ export default function Home() {
             </div>
 
             {/* After */}
-            <div className="bg-white rounded-3xl border-2 border-emerald-100 p-8">
+            <div className="bg-white border-2 border-emerald-100 p-8">
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
                   <svg className="w-3 h-3 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
