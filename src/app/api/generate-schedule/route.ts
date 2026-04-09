@@ -8,6 +8,8 @@ export async function POST(req: NextRequest) {
     const formData = await req.formData();
     const file = formData.get("image") as File;
     const priority = formData.get("priority") as string;
+    const tasksRaw = formData.get("tasks") as string | null;
+    const tasks: { text: string; day: string }[] = tasksRaw ? JSON.parse(tasksRaw) : [];
 
     if (!file) {
       return NextResponse.json({ error: "No image provided" }, { status: 400 });
@@ -21,7 +23,7 @@ export async function POST(req: NextRequest) {
     const prompt = `You are a college schedule planner. Look at this class schedule image and generate a structured weekly plan.
 
 The student's top priority is: ${priority || "balanced academics"}.
-
+${tasks.length > 0 ? `\nThe student also has these tasks that must be scheduled into the week:\n${tasks.map((t) => `- "${t.text}"${t.day !== "Any day" ? ` (on ${t.day})` : ""}`).join("\n")}\nMake sure each of these tasks appears in the dailyPlan on the specified day (or any suitable day if unspecified).\n` : ""}
 Return a JSON object in this exact format:
 {
   "classes": [
