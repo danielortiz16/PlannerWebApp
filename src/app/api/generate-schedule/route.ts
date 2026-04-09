@@ -55,7 +55,8 @@ Fill in realistic study blocks, breaks, and personal time around the classes. Ke
     const schedule = JSON.parse(jsonMatch[0]);
     return NextResponse.json(schedule);
   } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Failed to generate schedule" }, { status: 500 });
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("Gemini error:", message);
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

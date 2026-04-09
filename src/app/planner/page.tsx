@@ -55,8 +55,9 @@ export default function PlannerPage() {
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       setSchedule(data);
-    } catch {
-      setError("Something went wrong. Please try again.");
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Something went wrong.";
+      setError(msg);
     } finally {
       setLoading(false);
     }
