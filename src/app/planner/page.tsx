@@ -43,7 +43,7 @@ type Schedule = {
   tip: string;
 };
 
-const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Any day"];
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "Any day"];
 
 export default function PlannerPage() {
   const { gateUser, checked, saveUser } = useGateUser();
@@ -117,7 +117,7 @@ export default function PlannerPage() {
     }
   }
 
-  const planDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  const planDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
   function exportToCalendar() {
     if (!schedule) return;
@@ -131,7 +131,7 @@ export default function PlannerPage() {
     monday.setHours(0, 0, 0, 0);
 
     const dayOffsets: Record<string, number> = {
-      Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
+      Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4, Saturday: 5, Sunday: 6,
     };
 
     function parseTime(timeStr: string): { h: number; m: number } {
