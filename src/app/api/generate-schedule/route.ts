@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const MODELS = [
-  "minimax/minimax-m2.5:free",
-  "google/gemma-4-26b-a4b-it:free",
-  "openai/gpt-oss-120b:free",
-  "z-ai/glm-4.5-air:free",
-  "openai/gpt-oss-20b:free",
-  "nousresearch/hermes-3-llama-3.1-405b:free",
+  "google/gemini-2.0-flash-exp:free",
+  "meta-llama/llama-4-scout:free",
+  "meta-llama/llama-4-maverick:free",
+  "google/gemma-3-27b-it:free",
 ];
 
 async function tryModel(
