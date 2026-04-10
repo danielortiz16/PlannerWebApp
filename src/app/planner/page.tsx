@@ -1,6 +1,25 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+
+function useGateUser() {
+  const [gateUser, setGateUser] = useState<{ name: string; email: string } | null>(null);
+  const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("planit_user");
+    if (stored) setGateUser(JSON.parse(stored));
+    setChecked(true);
+  }, []);
+
+  function saveUser(name: string, email: string) {
+    const user = { name, email };
+    localStorage.setItem("planit_user", JSON.stringify(user));
+    setGateUser(user);
+  }
+
+  return { gateUser, checked, saveUser };
+}
 
 const priorityOptions = [
   { value: "better grades", label: "Better Grades" },
@@ -27,6 +46,20 @@ type Schedule = {
 const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Any day"];
 
 export default function PlannerPage() {
+  const { gateUser, checked, saveUser } = useGateUser();
+  const [gateName, setGateName]   = useState("");
+  const [gateEmail, setGateEmail] = useState("");
+  const [gateError, setGateError] = useState("");
+
+  function handleGateSubmit(e: React.SyntheticEvent) {
+    e.preventDefault();
+    const name  = gateName.trim();
+    const email = gateEmail.trim();
+    if (!name || !email) { setGateError("Please fill in both fields."); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setGateError("Please enter a valid email."); return; }
+    saveUser(name, email);
+  }
+
   const [image, setImage]       = useState<File | null>(null);
   const [preview, setPreview]   = useState<string | null>(null);
   const [priority, setPriority] = useState("better grades");
@@ -85,6 +118,123 @@ export default function PlannerPage() {
   }
 
   const planDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  function exportToCalendar() {
+    if (!schedule) return;
+
+    // Find the coming Monday
+    const today = new Date();
+    const dayOfWeek = today.getDay(); // 0=Sun, 1=Mon...
+    const daysUntilMonday = dayOfWeek === 0 ? 1 : (8 - dayOfWeek) % 7 || 7;
+    const monday = new Date(today);
+    monday.setDate(today.getDate() + daysUntilMonday);
+    monday.setHours(0, 0, 0, 0);
+
+    const dayOffsets: Record<string, number> = {
+      Monday: 0, Tuesday: 1, Wednesday: 2, Thursday: 3, Friday: 4,
+    };
+
+    function parseTime(timeStr: string): { h: number; m: number } {
+      const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+      if (!match) return { h: 9, m: 0 };
+      let h = parseInt(match[1]);
+      const m = parseInt(match[2]);
+      const period = match[3].toUpperCase();
+      if (period === "PM" && h !== 12) h += 12;
+      if (period === "AM" && h === 12) h = 0;
+      return { h, m };
+    }
+
+    function toICSDate(base: Date, offsetDays: number, h: number, m: number): string {
+      const d = new Date(base);
+      d.setDate(base.getDate() + offsetDays);
+      d.setHours(h, m, 0, 0);
+      return d.toISOString().replace(/[-:]/g, "").split(".")[0];
+    }
+
+    const lines: string[] = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//PlanitPlease//EN",
+      "CALSCALE:GREGORIAN",
+    ];
+
+    planDays.forEach((day) => {
+      const offset = dayOffsets[day];
+      const items = schedule.dailyPlan[day] || [];
+      items.forEach((item, idx) => {
+        const { h, m } = parseTime(item.time);
+        const dtstart = toICSDate(monday, offset, h, m);
+        const dtend   = toICSDate(monday, offset, h, m + 50); // 50-min blocks
+        lines.push(
+          "BEGIN:VEVENT",
+          `UID:planitplease-${day}-${idx}-${Date.now()}`,
+          `DTSTART:${dtstart}`,
+          `DTEND:${dtend}`,
+          `SUMMARY:${item.task}`,
+          `CATEGORIES:${item.type.toUpperCase()}`,
+          "END:VEVENT"
+        );
+      });
+    });
+
+    lines.push("END:VCALENDAR");
+
+    const blob = new Blob([lines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href     = url;
+    a.download = "planitplease-schedule.ics";
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  if (!checked) return null;
+
+  if (!gateUser) {
+    return (
+      <div className="min-h-screen bg-[#FAFAF8] flex items-center justify-center px-6">
+        <div className="w-full max-w-md">
+          <div className="text-center mb-8">
+            <span className="inline-block bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
+              Get Started
+            </span>
+            <h1 className="text-3xl font-extrabold text-[#1C1626] mb-2">Before we build your plan</h1>
+            <p className="text-[#6B6580]">Enter your name and email to continue.</p>
+          </div>
+          <form onSubmit={handleGateSubmit} className="bg-white border border-[#E8E3F5] p-8 space-y-4 shadow-sm">
+            <div>
+              <label className="block text-sm font-semibold text-[#1C1626] mb-1.5">Full name</label>
+              <input
+                type="text"
+                value={gateName}
+                onChange={(e) => setGateName(e.target.value)}
+                placeholder="Jane Smith"
+                className="w-full px-4 py-2.5 border border-[#E8E3F5] bg-white text-[#1C1626] placeholder-[#B0ABC4] focus:outline-none focus:ring-2 focus:ring-violet-300 text-sm transition"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-semibold text-[#1C1626] mb-1.5">Email address</label>
+              <input
+                type="email"
+                value={gateEmail}
+                onChange={(e) => setGateEmail(e.target.value)}
+                placeholder="jane@university.edu"
+                className="w-full px-4 py-2.5 border border-[#E8E3F5] bg-white text-[#1C1626] placeholder-[#B0ABC4] focus:outline-none focus:ring-2 focus:ring-violet-300 text-sm transition"
+              />
+            </div>
+            {gateError && <p className="text-rose-500 text-sm">{gateError}</p>}
+            <button
+              type="submit"
+              className="w-full bg-violet-600 text-white font-bold py-3 hover:bg-violet-700 transition-all duration-200 text-sm mt-2"
+            >
+              Continue to Planner
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-[#FAFAF8] text-[#1C1626]">
@@ -316,6 +466,16 @@ export default function PlannerPage() {
                 ))}
               </div>
             </div>
+
+            <button
+              onClick={exportToCalendar}
+              className="w-full bg-violet-600 text-white font-bold py-4 hover:bg-violet-700 hover:-translate-y-0.5 transition-all duration-200 text-sm shadow-sm flex items-center justify-center gap-2"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              Export to Calendar (.ics)
+            </button>
 
             <button
               onClick={() => { setSchedule(null); setImage(null); setPreview(null); setTasks([]); }}
