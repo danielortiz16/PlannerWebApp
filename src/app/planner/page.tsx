@@ -247,9 +247,22 @@ export default function PlannerPage() {
           <h1 className="text-4xl md:text-5xl font-extrabold mb-3 text-[#1C1626]">
             Build your <span className="text-violet-600">perfect schedule</span>
           </h1>
-          <p className="text-[#6B6580] text-lg">
+          <p className="text-[#6B6580] text-lg mb-8">
             Upload your class schedule, add your tasks, and we will build your week around your priorities.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left mt-2">
+            {[
+              { step: "1", title: "Upload your class schedule", desc: "Take a photo of your schedule or screenshot it — anything that shows your classes and times." },
+              { step: "2", title: "Add your tasks + pick a day", desc: "Add assignments, workouts, errands — and select which day each task should be scheduled on." },
+              { step: "3", title: "Get your full week plan", desc: "The AI fits everything together and hands you a ready-to-use schedule built around your priorities." },
+            ].map((item) => (
+              <div key={item.step} className="bg-white border border-[#E8E3F5] p-5">
+                <div className="w-7 h-7 bg-violet-600 text-white text-xs font-bold flex items-center justify-center mb-3">{item.step}</div>
+                <p className="font-bold text-[#1C1626] text-sm mb-1">{item.title}</p>
+                <p className="text-[#9E99B0] text-xs leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
