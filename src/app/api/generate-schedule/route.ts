@@ -1,10 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const MODELS = [
+  "minimax/minimax-m2.5:free",
+  "google/gemma-4-26b-a4b-it:free",
   "google/gemini-2.0-flash-exp:free",
   "meta-llama/llama-4-scout:free",
   "meta-llama/llama-4-maverick:free",
-  "google/gemma-3-27b-it:free",
 ];
 
 async function tryModel(
