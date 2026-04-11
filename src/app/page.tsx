@@ -428,6 +428,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── See it in action ── */}
+      <section className="max-w-5xl mx-auto px-6 py-24">
+        <div className="text-center mb-12">
+          <p className="text-violet-600 text-sm font-semibold uppercase tracking-widest mb-3">Real output</p>
+          <h2 className="text-3xl font-extrabold text-[#1C1626]">This is what your week looks like</h2>
+          <p className="text-[#6B6580] mt-3 max-w-xl mx-auto">Upload your schedule, and PlanitPlease hands you a full week broken down by day — classes detected, tasks slotted in, everything organized.</p>
+        </div>
+        <div className="relative">
+          <div className="absolute -inset-3 bg-violet-100/50 -z-10" />
+          <Image
+            src="/photo4.jpeg"
+            alt="PlanitPlease schedule output example"
+            width={1000}
+            height={600}
+            className="w-full border border-[#E8E3F5] shadow-lg"
+          />
+        </div>
+      </section>
+
       {/* ── Waitlist CTA ── */}
       <section id="waitlist" className="bg-[#F4F1FB] clip-diagonal-top py-32 text-center">
         <div className="max-w-xl mx-auto px-6">
