@@ -57,10 +57,21 @@ export default function Home() {
               <p className="text-[#6B6580] text-lg max-w-lg mb-8 leading-relaxed">
                 Upload a photo of your class schedule, tell us your goals, and PlanitPlease builds a personalized daily plan in seconds.
               </p>
-              <div className="max-w-md mx-auto md:mx-0">
-                <WaitlistForm />
+              <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto md:mx-0">
+                <a
+                  href="/planner"
+                  className="flex-1 bg-violet-600 text-white font-bold px-8 py-4 text-center hover:bg-violet-700 hover:-translate-y-0.5 transition-all duration-200 shadow-sm text-lg"
+                >
+                  Try the Planner →
+                </a>
+                <a
+                  href="#waitlist"
+                  className="flex-1 border border-violet-300 text-violet-700 font-semibold px-8 py-4 text-center hover:bg-violet-50 transition-all duration-200 text-lg"
+                >
+                  Join Waitlist
+                </a>
               </div>
-              <p className="mt-3 text-sm text-[#B0ABC4]">No credit card required. Launching soon.</p>
+              <p className="mt-3 text-sm text-[#B0ABC4]">Free to use. No account required.</p>
             </div>
 
             {/* Right — floating schedule card + notification badge */}
